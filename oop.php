@@ -5,7 +5,7 @@ require_once 'classes/FirstClass.php';
 require_once 'classes/Car.php';
 require_once 'classes/Homework.php';
 require_once 'classes/Product.php';
-require_once 'classes/NotebookProduct.php';
+//require_once 'classes/NotebookProduct.php';
 require_once 'classes/BookProduct.php';
 
 function debug($data){ // получает некий параметр имя не должно совпадать
@@ -56,10 +56,16 @@ function debugs($data){ // получает некий параметр имя �
 
 
 $book = new BookProduct('три мушкетера', 20, 1000);
-$notebook = new NotebookProduct('dell', 1000, 'intel');
+//$notebook = new NotebookProduct('dell', 1000, 'intel');
 
  debugs($book);
- debugs($notebook);
+// debugs($notebook);
+
 
 echo $book->getProduct();
-echo $notebook->getProduct();
+//echo $notebook->getProduct();
+
+
+//var_dump($book->public);
+//var_dump($book->protected);
+//var_dump($book->private);

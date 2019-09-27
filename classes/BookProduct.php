@@ -15,11 +15,15 @@ class BookProduct extends Product
     {
         parent::__construct($name, $price); // наследовает родительского метода с аргументами
         $this->numPages = $numPages;
+        $this->setDiscount(5);
+
     }
 
     public function getProduct(){
         $out = parent::getProduct(); // вызов родительского метода
+        $out .= "цена без скидки: {$this->price}<br>";
         $out .= "кол-во страниц: {$this->numPages}<br>";
+        $out .= "скидка: {$this->getDiscount()}%<br>";
         return $out;
 
     }
